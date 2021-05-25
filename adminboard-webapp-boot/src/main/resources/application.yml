@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: adminboard-webapp-boot
+  profiles:
+    active: @profiles.active@
+---
+spring:
+  config:
+    activate:
+      on-profile: development
+  redis:
+    host: localhost
+    port: 6379
+redis:
+  event-publisher:
+    topic: adminboard-eventbus
+  event-subscriber:
+    group: adminboard
+    topic: adminboard-eventbus
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+server:
+  port: 8000
