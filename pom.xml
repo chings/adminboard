@@ -19,7 +19,6 @@
         <module>adminboard-service-boot</module>
         <module>adminboard-webapp</module>
         <module>adminboard-webapp-boot</module>
-        <module>adminboard-webui</module>
     </modules>
 
     <properties>
